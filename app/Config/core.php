@@ -17,7 +17,12 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
+if(file_exists(APP.'/Config/mode')){
+	$mode = file_get_contents (APP.'/Config/mode');
+	define('APP_MODE', strtoupper($mode));
+}else{
+	define('APP_MODE', 'PRODUCTION');
+}
 /**
  * CakePHP Debug Level:
  *
