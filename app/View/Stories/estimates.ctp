@@ -32,7 +32,7 @@
 <?php endforeach;?>
 <div>
 Your project has <?php echo $developers ?> give that all developers work full time your proejct 
-(totaling <?php echo array_sum($sum)?>) should be completed in  <?php echo (array_sum($sum) / $developers) *5 ?> weeks 
+(totaling <?php echo array_sum($sum)?>) should be completed in  <?php echo (array_sum($sum) / $developers) / 5 ?> weeks 
 given that initial velocity is 5.
  
 </div>

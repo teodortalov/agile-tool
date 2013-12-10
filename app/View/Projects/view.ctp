@@ -33,6 +33,7 @@
 	</ul>
 </div>
 <div class="related">
+
 	<h3><?php echo __('Related Stories'); ?></h3>
 	<?php if (!empty($project['Story'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
@@ -43,6 +44,7 @@
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($project['Story'] as $story): ?>
+
 		<tr>
 			<td><?php echo $story['id']; ?></td>
 			<td><?php echo $story['project_id']; ?></td>
@@ -65,6 +67,7 @@
 </div>
 <div class="related">
 	<h3><?php echo __('Related Users'); ?></h3>
+
 	<?php if (!empty($project['User'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -75,6 +78,7 @@
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($project['User'] as $user): ?>
+			<?php if(!is_array($user)) continue;?>
 		<tr>
 			<td><?php echo $user['id']; ?></td>
 			<td><?php echo $user['username']; ?></td>
